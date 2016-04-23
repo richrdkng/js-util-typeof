@@ -1,2 +1,5 @@
 # IntelliJ IDEA project folder
 .idea
+
+# Vagrant VM folder
+.vagrant

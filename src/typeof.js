@@ -2,6 +2,7 @@
  * typeof module.
  *
  * @module typeof
+ * @version 0.0.0
  *
  * @author Richard King <richrdkng@gmail.com> [GitHub]{@link https://github.com/richrdkng}
  * @licence MIT

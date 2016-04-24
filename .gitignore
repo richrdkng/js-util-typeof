@@ -9,3 +9,6 @@ node_modules
 
 # Bower components
 bower_components
+
+# Logs
+/npm-debug.log

@@ -3,3 +3,9 @@
 
 # Vagrant VM folder
 .vagrant
+
+# Node dependencies
+node_modules
+
+# Bower components
+bower_components

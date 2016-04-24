@@ -9,9 +9,13 @@
   "homepage": "https://github.com/richrdkng/js-util-typeof",
   "ignore": [
     "**/.*",
+    ".editorconfig",
+    ".gitattributes",
+    "provision",
+    "vagrantfile",
     "node_modules",
     "bower_components",
-    "test",
+    "tasks",
     "tests"
   ],
   "keywords": [

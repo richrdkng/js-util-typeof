@@ -1,0 +1,18 @@
+# editorconfig.org
+.editorconfig
+
+# Git attributes
+.gitattributes
+
+# Vagrant files and folders
+    # Vagrant provision folder
+    provision
+
+    # Vagrant VM file
+    vagrantfile
+
+# Tasks folder
+tasks
+
+# Tests folder
+tests

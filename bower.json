@@ -1,0 +1,27 @@
+{
+  "name": "js-util-typeof",
+  "description": "A utility function to fix and extend the built-in \"typeof\" operator of JavaScript.",
+  "main": "dist/typeof.min.js",
+  "authors": [
+    "Richard King <richrdkng@gmail.com> (https://github.com/richrdkng)"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/richrdkng/js-util-typeof",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "keywords": [
+    "type",
+    "typeof",
+    "util",
+    "utility",
+    "commonjs",
+    "amd",
+    "browser",
+    "umd"
+  ]
+}

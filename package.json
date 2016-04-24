@@ -1,0 +1,44 @@
+{
+  "name": "js-util-typeof",
+  "version": "0.0.0",
+  "description": "A utility function to fix and extend the built-in \"typeof\" operator of JavaScript.",
+  "author": "Richard King <richrdkng@gmail.com> (https://github.com/richrdkng)",
+  "license": "MIT",
+  "main": "dist/typeof.min.js",
+  "scripts": {
+    "gulp": "gulp --gulpfile tasks/index.js",
+    "build": "gulp --gulpfile tasks/index.js -- build",
+    "test": "gulp --gulpfile tasks/index.js -- test",
+    "watch": "gulp --gulpfile tasks/index.js -- watch"
+  },
+  "homepage": "https://github.com/richrdkng/js-util-typeof#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://richrdkng@github.com/richrdkng/js-util-typeof.git"
+  },
+  "bugs": {
+    "url": "https://github.com/richrdkng/js-util-typeof/issues"
+  },
+  "devDependencies": {
+    "app-root-path": "^1.0.0",
+    "assert": "^1.3.0",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-debug": "^2.1.2",
+    "gulp-mocha": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sequence": "^0.4.5",
+    "gulp-uglify": "^1.5.3",
+    "rekuire": "^0.1.9"
+  },
+  "keywords": [
+      "type",
+      "typeof",
+      "util",
+      "utility",
+      "commonjs",
+      "amd",
+      "browser",
+      "umd"
+  ]
+}

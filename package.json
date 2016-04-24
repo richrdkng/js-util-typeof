@@ -25,6 +25,7 @@
     "del": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-debug": "^2.1.2",
+    "gulp-header": "^1.7.1",
     "gulp-mocha": "^2.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-sequence": "^0.4.5",
@@ -32,13 +33,13 @@
     "rekuire": "^0.1.9"
   },
   "keywords": [
-      "type",
-      "typeof",
-      "util",
-      "utility",
-      "commonjs",
-      "amd",
-      "browser",
-      "umd"
+    "type",
+    "typeof",
+    "util",
+    "utility",
+    "commonjs",
+    "amd",
+    "browser",
+    "umd"
   ]
 }

@@ -4,6 +4,7 @@ const use     = require("rekuire"),
       remove   = require("del"),
       rename   = require("gulp-rename"),
       compress = require("gulp-uglify"),
+      header   = require("gulp-header"),
       sequence = require("gulp-sequence"),
       debug    = require("gulp-debug"),
 
@@ -35,12 +36,20 @@ gulp.task("build::clear-dist", function(cb) {
 });
 
 gulp.task("build::build", function() {
+    var pkg = use("package.json");
+
     return gulp
         .src(Paths.getPath("src") + "/typeof.js")
         .pipe(rename({
             basename : "typeof.min"
         }))
         .pipe(compress())
+        .pipe(header(
+            "/* <%= pkg.name %> v<%= pkg.version %> | (c) <%= pkg.license %> @ <%= pkg.author %> */\n",
+            {
+                pkg : pkg
+            }
+        ))
         .pipe(gulp.dest(Paths.getPath("dist")))
 });
 

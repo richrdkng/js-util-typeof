@@ -34,7 +34,7 @@ gulp.task("build::clear-dist", function(cb) {
     );
 });
 
-gulp.task("build::compress", function() {
+gulp.task("build::build", function() {
     return gulp
         .src(Paths.getPath("src") + "/typeof.js")
         .pipe(rename({
@@ -49,7 +49,7 @@ gulp.task(
     function(cb) {
         sequence(
             "build::clear-dist",
-            "build::compress"
+            "build::build"
         )(cb);
     }
 );

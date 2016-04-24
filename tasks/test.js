@@ -42,3 +42,11 @@ gulp.task(
         "test::test-base"
     )
 );
+
+gulp.task(
+    "test",
+    sequence(
+        "test::test-dev",
+        "test::test-prod"
+    )
+);

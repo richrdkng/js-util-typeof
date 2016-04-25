@@ -9,7 +9,8 @@
     "gulp": "gulp --gulpfile tasks/index.js",
     "build": "gulp --gulpfile tasks/index.js -- build",
     "test": "gulp --gulpfile tasks/index.js -- test",
-    "watch": "gulp --gulpfile tasks/index.js -- watch"
+    "watch": "gulp --gulpfile tasks/index.js -- watch",
+    "ci": "gulp --gulpfile tasks/index.js -- ci"
   },
   "homepage": "https://github.com/richrdkng/js-util-typeof#readme",
   "repository": {

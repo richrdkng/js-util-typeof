@@ -70,9 +70,9 @@ module.exports = {
                 assert(typeOf(new Error(), true)  === "error");
             },
             "primitive type object wrappers" : function() { // Boolean, Number, String
-                assert(typeOf(new Boolean(true), true)      === "object");
-                assert(typeOf(new Number(42), true)         === "object");
-                assert(typeOf(new String("a string"), true) === "object");
+                assert(typeOf(new Boolean(true), true)      === "boolean");
+                assert(typeOf(new Number(42), true)         === "number");
+                assert(typeOf(new String("a string"), true) === "string");
             }
         }
     }

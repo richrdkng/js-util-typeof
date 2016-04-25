@@ -42,10 +42,10 @@
      * typeOf(0) === "number";
      * typeOf("string") === "string";
      *
-     * // reference types
+     * // reference types (arrays, plain objects, functions, Date, RegExp and Error objects)
+     * typeOf(function(){}) === "function";
      * typeOf([]) === "array";
      * typeOf({}) === "object";
-     * typeOf(function(){}) === "function";
      * typeOf(new Date()) === "object";
      * typeOf(new RegExp()) === "object";
      * typeOf(new Error()) === "object";

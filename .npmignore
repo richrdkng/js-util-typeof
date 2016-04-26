@@ -4,6 +4,8 @@
 # Git attributes
 .gitattributes
 
+logo
+
 # Vagrant files and folders
     # Vagrant provision folder
     provision

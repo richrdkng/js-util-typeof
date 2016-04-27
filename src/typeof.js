@@ -50,10 +50,10 @@
      * typeOf(new RegExp()) === "object";
      * typeOf(new Error()) === "object";
      *
-     * @arg {*}       object                  The object to return its type.
-     * @arg {boolean} specific       = false  Return the specific type of the given object.
-     * @arg {boolean} unmodifiedCase = false  Return the type as unmodified case.
-     *                                        By default the type will be lower-case.
+     * @param {*}       object                  The object to return its type.
+     * @param {boolean} specific       = false  Return the specific type of the given object.
+     * @param {boolean} unmodifiedCase = false  Return the type as unmodified case.
+     *                                          By default the type will be lower-case.
      *
      * @returns {string} Type of the given object.
      */

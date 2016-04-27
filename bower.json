@@ -11,6 +11,7 @@
     "**/.*",
     ".editorconfig",
     ".gitattributes",
+    "coverage",
     "logo",
     "provision",
     "vagrantfile",

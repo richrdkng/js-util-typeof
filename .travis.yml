@@ -1,6 +1,7 @@
 language: node_js
 
 node_js:
+  - stable
   - "5"
   - "5.1"
   - "4"
@@ -10,6 +11,7 @@ node_js:
   - "0.12"
   - "0.11"
   - "0.10"
-  
+
 script:
   - npm run ci
+  - npm run coveralls

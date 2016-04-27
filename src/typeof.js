@@ -14,6 +14,7 @@
  * [UMD GitHub Repository]{@link https://github.com/umdjs/umd}
  */
 (function(root, factory) {
+    /* istanbul ignore next: ignore coverage test for UMD */
     if (typeof define === "function" && define.amd) {
         define([], factory);
     } else if (typeof module === "object" && module.exports) {

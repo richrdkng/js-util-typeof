@@ -73,6 +73,11 @@ module.exports = {
                 assert(typeOf(new Boolean(true), true)      === "boolean");
                 assert(typeOf(new Number(42), true)         === "number");
                 assert(typeOf(new String("a string"), true) === "string");
+
+                // TODO: separate these tests into other, own cases
+                assert(typeOf(new Boolean(true), true, true)      === "Boolean");
+                assert(typeOf(new Number(42), true, true)         === "Number");
+                assert(typeOf(new String("a string"), true, true) === "String");
             }
         }
     }

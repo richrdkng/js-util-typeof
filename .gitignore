@@ -4,6 +4,9 @@
 # Vagrant VM folder
 .vagrant
 
+# Code coverage reports
+coverage
+
 # Node dependencies
 node_modules
 

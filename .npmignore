@@ -4,6 +4,9 @@
 # Git attributes
 .gitattributes
 
+# Code coverage reports
+coverage
+
 logo
 
 # Vagrant files and folders

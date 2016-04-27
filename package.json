@@ -35,7 +35,9 @@
     "gulp-rename": "^1.2.2",
     "gulp-sequence": "^0.4.5",
     "gulp-uglify": "^1.5.3",
-    "rekuire": "^0.1.9"
+    "jsonfile": "^2.3.0",
+    "rekuire": "^0.1.9",
+    "semver": "^5.1.0"
   },
   "keywords": [
     "type",

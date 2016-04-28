@@ -6,7 +6,6 @@
 [![Dev Dependencies](https://david-dm.org/richrdkng/js-util-typeof/dev-status.svg)](https://david-dm.org/richrdkng/js-util-typeof#info=devDependencies)
 
 ![Recent Version](https://img.shields.io/github/tag/richrdkng/js-util-tyepof.svg?maxAge=2592000)
-![MIT License](http://img.shields.io/:license-MIT-green.svg)
 [![Gitter](https://badges.gitter.im/richrdkng/js-util-typeof.svg)](https://gitter.im/richrdkng/js-util-typeof?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 ## Synopsis

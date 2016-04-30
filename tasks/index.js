@@ -5,6 +5,7 @@ const use   = require("rekuire"),
 
       Paths = use("paths");
 
+// load tasks
 use("tasks/build");
 use("tasks/test");
 use("tasks/watch");

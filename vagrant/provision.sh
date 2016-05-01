@@ -31,7 +31,7 @@ npm rm --global gulp
 npm install --global gulp gulp-cli
 
 # add custom .bashrc content to .bashrc
-cat /vagrant/provision/home/vagrant/.bashrc >> /home/vagrant/.bashrc
+cat /vagrant/vagrant/home/vagrant/.bashrc >> /home/vagrant/.bashrc
 
 # update after provisioning
 apt-get update -y

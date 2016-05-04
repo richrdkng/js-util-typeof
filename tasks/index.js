@@ -10,6 +10,7 @@ use("tasks/build");
 use("tasks/test");
 use("tasks/watch");
 use("tasks/bump");
+use("tasks/doc");
 use("tasks/ci");
 
 // the default task is left here for quick testing purposes

@@ -16,8 +16,9 @@ const Paths = function() {
     const root = path.normalize(appRoot.toString());
 
     this.addPath("root",  root);
-    this.addPath("src",   path.normalize(root + "/src"));
     this.addPath("dist",  path.normalize(root + "/dist"));
+    this.addPath("doc",   path.normalize(root + "/doc"));
+    this.addPath("src",   path.normalize(root + "/src"));
     this.addPath("tests", path.normalize(root + "/tests"));
 };
 

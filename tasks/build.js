@@ -10,7 +10,7 @@ const use     = require("rekuire"),
 
       Paths   = use("paths");
 
-gulp.task("build::clear-dist", function(cb) {
+gulp.task("build::clear", function(cb) {
     var dist = Paths.getPath("dist");
 
     remove(
@@ -57,7 +57,7 @@ gulp.task(
     "build",
     function(cb) {
         sequence(
-            "build::clear-dist",
+            "build::clear",
             "build::build"
         )(cb);
     }

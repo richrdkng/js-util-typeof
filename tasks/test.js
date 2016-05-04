@@ -8,8 +8,9 @@ const use   = require("rekuire"),
 
       Paths = use("paths");
 
-const TYPE_DEV  = 1,
-      TYPE_PROD = 2;
+const TYPE_DEV             = 1,
+      TYPE_DEV_NO_COVERAGE = 2,
+      TYPE_PROD            = 3;
 
 var type;
 
@@ -56,6 +57,13 @@ gulp.task("test::test-src-dev", function(cb) {
     cb();
 });
 
+gulp.task("test::test-src-dev-no-coverage", function(cb) {
+    Paths.addPath("test-path", Paths.getPath("src") + "/typeof.js");
+    type = TYPE_DEV_NO_COVERAGE;
+
+    cb();
+});
+
 gulp.task("test::test-src-prod", function(cb) {
     Paths.addPath("test-path", Paths.getPath("dist") + "/typeof.min.js");
     type = TYPE_PROD;
@@ -68,6 +76,14 @@ gulp.task(
     sequence(
         "test::test-src-dev",
         "test::init-coverage",
+        "test::test-base"
+    )
+);
+
+gulp.task(
+    "test::test-dev-no-coverage",
+    sequence(
+        "test::test-src-dev-no-coverage",
         "test::test-base"
     )
 );

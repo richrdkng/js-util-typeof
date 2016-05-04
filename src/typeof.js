@@ -1,7 +1,7 @@
 /**
- * typeof module.
+ * @overview A utility function to fix and extend the built-in "typeof" operator of JavaScript.
  *
- * @module typeof
+ * @module js/util/typeof
  * @version 0.0.0
  *
  * @author Richard King <richrdkng@gmail.com> [GitHub]{@link https://github.com/richrdkng}
@@ -25,15 +25,21 @@
 }(this, function () {
     "use strict";
 
-    /** @var {undefined} */
-    var undefined = (function() {})();
-
     /**
      * Returns the type of the given object.
      *
      * By default the function will return similar results to the built-in "typeof" operator, but:
      *    - when passing arrays it will return "array" as result
      *    - when passing objects, it will return "object" as result
+     *
+     * @function typeOf
+     *
+     * @param {*}       object                The object to return its type.
+     * @param {boolean} [specificType=false]  Return the specific type of the given object.
+     * @param {boolean} [originalCase=false]  Return the type as unmodified case.
+     *                                        By default the type will be lower-case.
+     *
+     * @returns {string} Type of the given object.
      *
      * @example
      * // primitive types (undefined, null, Boolean, Number, String)
@@ -50,66 +56,95 @@
      * typeOf(new Date()) === "object";
      * typeOf(new RegExp()) === "object";
      * typeOf(new Error()) === "object";
-     *
-     * @param {*}       object                  The object to return its type.
-     * @param {boolean} specific       = false  Return the specific type of the given object.
-     * @param {boolean} unmodifiedCase = false  Return the type as unmodified case.
-     *                                          By default the type will be lower-case.
-     *
-     * @returns {string} Type of the given object.
      */
-    return function typeOf(object, specific, unmodifiedCase) {
-        var type,
-            str;
+    return function typeOf(object, specificType, originalCase) {
+        var type = typeof object,
+            str  = Object.prototype.toString.call(object);
 
-        specific       = specific === true       ? specific       : false;
-        unmodifiedCase = unmodifiedCase === true ? unmodifiedCase : false;
+        specificType = specificType === true ? specificType : false;
+        originalCase = originalCase === true ? originalCase : false;
 
-        if (object === undefined) {
-            type = "Undefined";
-
-        } else if (object === null) {
-            type = "Null";
-
+        if (!originalCase) {
+            if (type === "object") {
+                if (object === null) {
+                    type = "null";
+                }
+            }
         } else {
-            switch (typeof object) {
-                case "boolean" :
-                    type = "Boolean";
-                    break;
+            if (type === "undefined") {
+                type = "Undefined";
 
-                case "number" :
-                    type = "Number";
-                    break;
+            } else if (object === null) {
+                type = "Null";
 
-                case "string" :
-                    type = "String";
-                    break;
+            } else {
+                switch (typeof object) {
+                    case "boolean" :
+                        type = "Boolean";
+                        break;
 
-                case "object" :
-                    if (!specific) {
-                        if(Object.prototype.toString.call(object) === "[object Array]") {
-                            type = "Array";
+                    case "number" :
+                        type = "Number";
+                        break;
 
-                        } else {
-                            type = "Object";
-                        }
+                    case "string" :
+                        type = "String";
+                        break;
 
-                    } else {
-                        str  = Object.prototype.toString.call(object);
-                        type = str.substring(8, str.length-1);
-                    }
-                    break;
+                    case "symbol" :
+                        type = "Symbol";
+                        break;
 
-                case "function" :
-                    type = "Function";
-                    break;
+                    case "function" :
+                        type = "Function";
+                        break;
+                }
             }
         }
 
-        if (unmodifiedCase) {
-            return type;
+        if (!specificType) {
+            if (object !== null && type === "object") {
+                if (str === "[object Array]") {
+                    if (!originalCase) {
+                        type = "array";
+                    } else {
+                        type = "Array";
+                    }
+                } else if (str === "[object Object]") {
+                    if (originalCase) {
+                        type = "Object";
+                    }
+                } else if (
+                    object instanceof Int8Array ||
+                    object instanceof Uint8Array ||
+                    object instanceof Uint8ClampedArray ||
+                    object instanceof Int16Array ||
+                    object instanceof Uint16Array ||
+                    object instanceof Int32Array ||
+                    object instanceof Uint32Array ||
+                    object instanceof Float32Array ||
+                    object instanceof Float64Array
+                ) {
+                    if (!originalCase) {
+                        type = "typedarray";
+                    } else {
+                        type = "TypedArray";
+                    }
+                }
+
+                console.log("!!!", type, str);
+            }
         } else {
-            return type.toLowerCase();
+            // acquire the constructor's name from string "[object ConstructorName]"
+            type = str.substring(8, str.length-1);
+
+            console.log(type, str, Object.prototype.toString.call(object));
+
+            if (!originalCase) {
+                type = type.toLowerCase();
+            }
         }
+
+        return type;
     };
 }));

@@ -1,7 +1,7 @@
 {
   "name": "js-util-typeof",
-  "version": "1.0.0",
-  "description": "A utility function to fix and extend the built-in \"typeof\" operator of JavaScript.",
+  "version": "1.0.1",
+  "description": "A utility function to fix and extend the built-in ''typeof'' operator of JavaScript.",
   "author": "Richard King <richrdkng@gmail.com> (https://github.com/richrdkng)",
   "license": "MIT",
   "main": "dist/typeof.min.js",

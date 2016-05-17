@@ -9,6 +9,7 @@
     "gulp": "gulp --gulpfile gulp/index.js",
     "build": "gulp --gulpfile gulp/index.js -- build",
     "test": "gulp --gulpfile gulp/index.js -- test",
+    "bump": "scripts/bump.sh",
     "watch": "gulp --gulpfile gulp/index.js -- watch",
     "ci": "gulp --gulpfile gulp/index.js -- ci",
     "coveralls": "coveralls < coverage/lcov.info"

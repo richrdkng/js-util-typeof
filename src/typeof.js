@@ -2,7 +2,7 @@
  * @overview A utility function to fix and extend the built-in "typeof" operator of JavaScript.
  *
  * @module js/util/typeof
- * @version 0.0.0
+ * @version 1.0.0
  *
  * @author Richard King <richrdkng@gmail.com> [GitHub]{@link https://github.com/richrdkng}
  * @licence MIT

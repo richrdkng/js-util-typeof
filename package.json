@@ -6,11 +6,11 @@
   "license": "MIT",
   "main": "dist/typeof.min.js",
   "scripts": {
-    "gulp": "gulp --gulpfile tasks/index.js",
-    "build": "gulp --gulpfile tasks/index.js -- build",
-    "test": "gulp --gulpfile tasks/index.js -- test",
-    "watch": "gulp --gulpfile tasks/index.js -- watch",
-    "ci": "gulp --gulpfile tasks/index.js -- ci",
+    "gulp": "gulp --gulpfile gulp/index.js",
+    "build": "gulp --gulpfile gulp/index.js -- build",
+    "test": "gulp --gulpfile gulp/index.js -- test",
+    "watch": "gulp --gulpfile gulp/index.js -- watch",
+    "ci": "gulp --gulpfile gulp/index.js -- ci",
     "coveralls": "coveralls < coverage/lcov.info"
   },
   "homepage": "https://github.com/richrdkng/js-util-typeof#readme",

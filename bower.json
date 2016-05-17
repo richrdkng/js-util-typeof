@@ -13,11 +13,11 @@
     ".gitattributes",
     "coverage",
     "logo",
-    "provision",
+    "vagrant",
     "vagrantfile",
     "node_modules",
     "bower_components",
-    "tasks",
+    "gulp",
     "tests"
   ],
   "keywords": [

@@ -6,12 +6,12 @@ const use   = require("rekuire"),
       Paths = use("paths");
 
 // load tasks
-use("tasks/build");
-use("tasks/test");
-use("tasks/watch");
-use("tasks/bump");
-use("tasks/doc");
-use("tasks/ci");
+use("/build");
+use("/test");
+use("/watch");
+use("/bump");
+use("/doc");
+use("/ci");
 
 // the default task is left here for quick testing purposes
 gulp.task("default", function() {

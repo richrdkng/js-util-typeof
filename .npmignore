@@ -11,13 +11,13 @@ logo
 
 # Vagrant files and folders
     # Vagrant provision folder
-    provision
+    vagrant
 
     # Vagrant VM file
     vagrantfile
 
-# Tasks folder
-tasks
+# Gulp tasks folder
+gulp
 
 # Tests folder
 tests

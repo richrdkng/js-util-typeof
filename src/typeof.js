@@ -126,10 +126,12 @@
                     } else {
                         type = "Array";
                     }
+
                 } else if (str === "[object Object]") {
                     if (originalCase) {
                         type = "Object";
                     }
+
                 } else if (
                     object instanceof Int8Array ||
                     object instanceof Uint8Array ||

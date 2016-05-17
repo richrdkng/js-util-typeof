@@ -12,12 +12,13 @@
     "bump": "scripts/bump.sh",
     "watch": "gulp --gulpfile gulp/index.js -- watch",
     "ci": "gulp --gulpfile gulp/index.js -- ci",
-    "coveralls": "coveralls < coverage/lcov.info"
+    "coveralls": "coveralls < coverage/lcov.info",
+    "distribute": "scripts/distribute.sh"
   },
   "homepage": "https://github.com/richrdkng/js-util-typeof#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://richrdkng@github.com/richrdkng/js-util-typeof.git"
+    "url": "git://github.com/richrdkng/js-util-typeof.git"
   },
   "bugs": {
     "url": "https://github.com/richrdkng/js-util-typeof/issues"

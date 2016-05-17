@@ -8,7 +8,7 @@
 
 ## Synopsis
 
-A utility function to fix and extend the built-in \"typeof\" operator of JavaScript.
+A utility function to fix and extend the built-in **typeof** operator of JavaScript.
 
 ## Getting Started
 
@@ -26,11 +26,14 @@ bower install js-util-typeof
 
 **Download**
 
-[![Download Development Badge][development-badge]][development-url]
+[![Download Development][development-badge]][development-url]
 Commented source code.
 
-[![Download Production Badge][production-badge]][production-url]
+[![Download Production][production-badge]][production-url]
 Minified code.
+
+[![Download Repository][repository-badge]][repository-url]
+In .zip.
 
 ## Usage
 
@@ -40,7 +43,7 @@ some js examples
 
 [Link to Documentation](https://github.com/richrdkng/js-util-typeof/wiki)
 
-## Suggestions, Requests & Ideas
+## Issues, Suggestions & Bugs
 
 [Link to Issues](https://github.com/richrdkng/js-util-typeof/issues)
 
@@ -48,13 +51,9 @@ some js examples
 
 [Link to contribution.md](contribution.md)
 
-## Issues & Bugs
-
-[Link to Issues](https://github.com/richrdkng/js-util-typeof/issues)
-
 ## Support
 
-[Link to Support](http://richrdkng.github.io/support/)
+[Link to Support](http://richrdkng.github.io/support)
 
 ## License
 
@@ -82,3 +81,6 @@ some js examples
 
 [production-badge]:   http://img.shields.io/badge/download-PRODUCTION-red.svg
 [production-url]:     https://cdn.rawgit.com/richrdkng/js-util-typeof/master/dist/typeof.min.js
+
+[repository-badge]:   http://img.shields.io/badge/download-REPOSITORY+DOCUMENTATION-orange.svg
+[repository-url]:     https://cdn.rawgit.com/richrdkng/js-util-typeof/master/dist/repository.zip

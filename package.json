@@ -1,6 +1,6 @@
 {
   "name": "js-util-typeof",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A utility function to fix and extend the built-in ''typeof'' operator of JavaScript.",
   "author": "Richard King <richrdkng@gmail.com> (https://github.com/richrdkng)",
   "license": "MIT",
@@ -13,7 +13,6 @@
     "ci": "gulp --gulpfile gulp/index.js -- ci",
     "coveralls": "coveralls < coverage/lcov.info",
     "bump": "scripts/bump.sh",
-    "bump-commit": "scripts/bump-commit.sh",
     "distribute": "scripts/distribute.sh"
   },
   "homepage": "https://github.com/richrdkng/js-util-typeof#readme",

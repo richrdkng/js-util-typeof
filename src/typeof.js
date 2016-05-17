@@ -59,7 +59,8 @@
      */
     return function typeOf(object, specificType, originalCase) {
         var type = typeof object,
-            str  = Object.prototype.toString.call(object);
+            str  = Object.prototype.toString.call(object),
+            acquireCtor;
 
         specificType = specificType === true ? specificType : false;
         originalCase = originalCase === true ? originalCase : false;
@@ -68,8 +69,23 @@
             if (type === "object") {
                 if (object === null) {
                     type = "null";
+                } else {
+                    switch (str) {
+                        case "[object Date]" :
+                            type = "date";
+                            break;
+
+                        case "[object RegExp]" :
+                            type = "regexp";
+                            break;
+
+                        case "[object Error]" :
+                            type = "error";
+                            break;
+                    }
                 }
             }
+
         } else {
             if (type === "undefined") {
                 type = "Undefined";
@@ -130,15 +146,28 @@
                     } else {
                         type = "TypedArray";
                     }
-                }
 
-                console.log("!!!", type, str);
+                } else if (
+                    str === "[object Boolean]" ||
+                    str === "[object Number]" ||
+                    str === "[object String]"
+                ) {
+                    if (!originalCase) {
+                        type = "object";
+                    } else {
+                        type = "Object";
+                    }
+
+                } else {
+                    acquireCtor = true;
+                }
             }
         } else {
-            // acquire the constructor's name from string "[object ConstructorName]"
-            type = str.substring(8, str.length-1);
+            acquireCtor = true;
+        }
 
-            console.log(type, str, Object.prototype.toString.call(object));
+        if (acquireCtor) {
+            type = str.substring(8, str.length-1);
 
             if (!originalCase) {
                 type = type.toLowerCase();

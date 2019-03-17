@@ -1,5 +1,7 @@
 # ![js-util-typeof][logo]
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/richrdkng/js-util-typeof.svg)](https://greenkeeper.io/)
+
 [![Recent Version][npm-badge]][npm-url]
 [![Travis CI - Build Status][travis-badge]][travis-url]
 [![Coveralls - Code Coverage Status][coverage-badge]][coverage-url]
